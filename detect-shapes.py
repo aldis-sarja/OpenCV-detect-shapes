@@ -1,10 +1,10 @@
 #!/usr/bin/python
-
 import sys
 import cv2
 import math
 import numpy
 import json
+from os.path import exists
 
 SHAPE_TRIANGLE = 1
 SHAPE_RECTANGLE = 2
@@ -30,6 +30,10 @@ def calculateLength(l: float, focalLength: float, distance: float):
 
 
 def parseArgs(args):
+    if not exists(args[1]) or not exists(args[2]):
+        print("Please provide correct file names!")
+        print(usage)
+        exit()
     try:
         distance = float(args[3])
     except:
