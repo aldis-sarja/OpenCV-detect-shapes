@@ -11,4 +11,4 @@ The source of json file should contain something like that:
 Run:
 `python detect-shapes.py <image-file> <camera-intrinsics-file> <object-distance-from-camera-mm> [--show]`
 
-With `--show` option app, will show image with labels and contours of shapes.
+With `--show` option, app will show image with labels and contours of shapes.
